@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component tests Render correctly initial document 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-1niv0cm"
+  >
+    <form
+      data-test="login-form"
+      style="margin-left: 1.1rem; margin-top: 2rem;"
+    >
+      <div
+        class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary form-control css-a88p61-MuiInputBase-root-MuiInput-root"
+        required=""
+        style="width: 25rem; margin-bottom: 1rem;"
+      >
+        <input
+          class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+          name="countryName"
+          placeholder="Enter Country"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root Mui-disabled css-sghohy-MuiButtonBase-root-MuiButton-root"
+        disabled=""
+        style="margin-top: 1rem; margin-left: 9rem;"
+        tabindex="-1"
+        type="submit"
+      >
+        <span
+          class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 14h-3v3h-2v-3H8v-2h3v-3h2v3h3v2zm-3-7V3.5L18.5 9H13z"
+            />
+          </svg>
+        </span>
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;
