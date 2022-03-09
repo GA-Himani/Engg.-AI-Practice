@@ -88,7 +88,7 @@ const Question = () => {
     });
     if (ansArray.length) {
       if (ansArray.every((val: Boolean) => val === true)) {
-        if (data[4].correctAnswer.length === ansArray.length) {
+        if (data[4].correctAnswer.val === ansArray.val) {
           setResult(true);
         } else {
           setResult(false);

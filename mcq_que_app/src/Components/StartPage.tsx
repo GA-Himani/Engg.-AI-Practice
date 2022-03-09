@@ -87,7 +87,7 @@ const langChange = (event: SelectChangeEvent) => {
             required
           >
             <MenuItem value="english">English</MenuItem>
-            {/*<MenuItem value="hindi">Hindi</MenuItem>*/}
+            <MenuItem value="hindi">Hindi</MenuItem>
           </Select>
           <Button
           data-testid = "button"
