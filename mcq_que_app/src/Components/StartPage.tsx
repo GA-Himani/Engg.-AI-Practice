@@ -23,11 +23,12 @@ const classes = {
   },
 };
 
+//
 
 const StartPage: React.FC = () => {
   const [lang, setLang] = React.useState("");
   const navigate = useNavigate();
- const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
 const langChange = (event: SelectChangeEvent) => {
     setLang(event.target.value as string);
