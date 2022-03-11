@@ -24,8 +24,8 @@ console.log(data)
   };
 
   const [input, setInput] = useState("");
-  const [showSearch, setShowSearch] = useState(true);
-  const [filterData, setFilterData] = useState([]);
+  const [showSearch, setShowSearch] = useState('');
+  //const [filterData, setFilterData] = useState([]);
   const [pageForSearch, setPageForSearch] = useState(true);
 
   
@@ -33,30 +33,6 @@ console.log(data)
     setPage(val);
     setPageValue(val - 1);
   };
-
-
-
-  const searchHandler = (e: any) => {
-    setPageForSearch(false);
-    e.preventDefault();
-    const dataBySearch = data.slice(pageValue * 20, pageValue * 20 + 20).filter((val: any) => {
-      return (
-        val.title.toLowerCase().trim().includes(input.toLowerCase().trim()) ||
-        moment(val.created_at).format('LLLL').toLowerCase().trim().includes(input.toLowerCase().trim())
-      );
-    });
-    setShowSearch(false);
-    setFilterData(dataBySearch);
-    setInput("");
-   
-  };
-  const refreshHandler = () =>{
-     if (input === "") {
-      setFilterData([]);
-      setShowSearch(true);
-      setPageForSearch(true);
-    }
-  }
 
 
   return (
@@ -69,18 +45,15 @@ console.log(data)
       />
  {load ? <CircularProgress size ={80} style={{marginLeft:'50%'}} /> :
       <div style={{ height: 750 }}>
-        <form  onSubmit={searchHandler} style={{margin:'1rem',display:'flex',justifyContent:'end'}}>
+        <form   style={{margin:'1rem',display:'flex',justifyContent:'end'}}>
           <InputBase
             style={{ border: "2px solid grey" }}
             placeholder="Search"
             type="text"
-            value={input}
             required
-            onChange={(event: ChangeEvent<HTMLInputElement>) =>
-              setInput(event.target.value)
-            }
+            onChange={(e)=> setShowSearch(e.target.value)}
           ></InputBase>
-         {showSearch ? <Button onClick={searchHandler} variant='contained' color='primary' disabled = {input === ''} >Search </Button> : <Button variant='contained' color='primary' onClick={refreshHandler} >Back</Button>}
+         {/*<Button onClick={searchHandler} variant='contained' color='primary' >Search </Button> */}
         </form>
         <Paper>
           <TableContainer>
@@ -95,10 +68,9 @@ console.log(data)
                 </TableRow>
               </TableHead>
               <TableBody>
-                {showSearch
-                  ? data
-                      .slice(pageValue * 20, pageValue * 20 + 20)
-                      .map((val: any, index: any) => {
+
+                {data.slice(pageValue * 20, pageValue * 20 + 20).filter((val: any) => {
+                  if(showSearch === ''){
                         return (
                           <TableRow
                             key={val.created_at_i}
@@ -112,9 +84,24 @@ console.log(data)
                             <TableCell>{val.url} </TableCell>
                           </TableRow>
                         );
-                      })
-                  : filterData
-                      .map((val: any, index: any) => {
+                      }
+                  else if(val.title.toLowerCase().trim().includes(showSearch.toLowerCase().trim()) ||
+                        moment(val.created_at).format('LLLL').toLowerCase().trim().includes(showSearch.toLowerCase().trim())){
+                        return(
+                          <TableRow
+                            key={val.created_at_i}
+                            onClick={() =>
+                              modalClickHandler(val.created_at_i, val)
+                            }
+                          >
+                            <TableCell>{moment(val.created_at).format('LLLL')}</TableCell>
+                            <TableCell>{val.title}</TableCell>
+                            <TableCell>{val.author}</TableCell>
+                            <TableCell>{val.url} </TableCell>
+                          </TableRow>
+                          )}
+                    }
+                      ).map((val: any, index: any) => {
                         return (
                           <TableRow
                             key={val.created_at_i}
