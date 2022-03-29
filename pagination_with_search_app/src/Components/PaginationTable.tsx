@@ -5,15 +5,25 @@ import Detail from './ModalJson'
 import {useSelector} from 'react-redux'
 import moment from 'moment'
 import {CircularProgress} from '@mui/material'
-
+const classes = {
+  button: {
+    marginTop: "1rem",
+    marginLeft: "9rem",
+  },
+  Input: {
+    width: "25rem",
+    marginBottom: "1rem",
+    border: "2px solid grey"
+  },
+};
 
 
 const PaginationTable = (props: any) => {
   const data = useSelector(fetchData);
-  const load = useSelector(isLoad)
+  const load = useSelector(isLoad);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [dataForModal, setDataForModal]: any[] = useState([]);
-console.log(data)
+  console.log(data);
 
   const [page, setPage] = useState(0);
   const [pageValue, setPageValue] = useState(0);
@@ -36,7 +46,7 @@ console.log(data)
 
 
   return (
-    <div data-test='component-pagination'>
+    <div>
       <Detail
         data={dataForModal}
         title="Post RawJSON"
@@ -45,15 +55,21 @@ console.log(data)
       />
  {load ? <CircularProgress size ={80} style={{marginLeft:'50%'}} /> :
       <div style={{ height: 750 }}>
+        
         <form   style={{margin:'1rem',display:'flex',justifyContent:'end'}}>
           <InputBase
-            style={{ border: "2px solid grey" }}
-            placeholder="Search"
+            data-testid="search"
+            style={classes.Input}
+            placeholder="Search by Title or Created_at"
             type="text"
             required
             onChange={(e)=> setShowSearch(e.target.value)}
           ></InputBase>
-         {/*<Button onClick={searchHandler} variant='contained' color='primary' >Search </Button> */}
+         {/*<Button data-testid='submit-button'
+            style={classes.button}
+            type='submit'
+            variant="contained"
+            color="primary" >Search </Button> */}
         </form>
         <Paper>
           <TableContainer>

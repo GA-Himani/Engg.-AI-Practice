@@ -56,10 +56,12 @@ const langChange = (event: SelectChangeEvent) => {
         mx="auto"
         mt="2rem"
       >
-        <form style={classes.form} data-test='login-form' onSubmit={submitHandler}>
+        <h1 data-testid="testHome">Form</h1>
+        <form style={classes.form} onSubmit={submitHandler}>
           <Input
             style={classes.Input}
             type="text"
+            data-testid="name-input"
             required
             className="form-control"
             placeholder="Name"
@@ -91,13 +93,13 @@ const langChange = (event: SelectChangeEvent) => {
             <MenuItem value="hindi">Hindi</MenuItem>
           </Select>
           <Button
-          data-testid = "button"
+            data-testid="submit-button"
             style={classes.button}
             type="submit"
             variant="contained"
             color="primary"
           >
-            Start MCQ
+            Submit
           </Button>
         </form>
       </Box>

@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <h2 style={{textAlign:'center'}}>Nasa Asteroid Detail App</h2>
+    	<h2 style={{textAlign:'center'}} data-testid="app-heading" > Nasa Asteroid Detail App </h2>
       <Routes>
         <Route path='/' element={<AsteroidSearch />} />
         <Route path='/AsteroidDetail' element={<AsteroidDetail />} />

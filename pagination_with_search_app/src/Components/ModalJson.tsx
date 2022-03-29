@@ -1,16 +1,17 @@
 import React from 'react'
 import {Dialog,DialogContent,DialogTitle,TableContainer,TableRow,TableCell,TableBody,Table } from '@mui/material'
 
-const Detail = (props:any) =>{
+const ModalJson = (props:any) =>{
 	const {title,open,setOpen,data} = props
 	return(
+
 		<Dialog
 			maxWidth ="sm"
 			open={open}
 			onClose={()=>setOpen(false)}
 			aria-labelledby="confirm-dialog"
 		>
-			<DialogTitle id="confirm-dialog"> {title} </DialogTitle>
+			<DialogTitle id="confirm-dialog" data-testid="details-heading"> {title} </DialogTitle>
 			<DialogContent>
 				Title :-  {JSON.stringify(data.title)}<br/><br/>
 				URL :-  {JSON.stringify(data.url)}<br/><br/>
@@ -23,4 +24,4 @@ const Detail = (props:any) =>{
 
 	)
 }
-export default Detail
+export default ModalJson

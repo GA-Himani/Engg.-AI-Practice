@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from "react";
-import { Box, Input, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
+import TextField from '@mui/material/TextField';
 import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
@@ -36,8 +37,14 @@ const classes = {
 export const InputForm: React.FC = () => {
   const history = useNavigate();
   const [input, setInput] = useState("");
+  const [flag, setFlag] = useState<number>(0);
   const dispatch = useDispatch();
   const load: boolean = useSelector(loading);
+
+  const handleChange = (e: any) => {
+    setInput(e.target.value);
+    setFlag(1);
+  }
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,6 +77,7 @@ export const InputForm: React.FC = () => {
 
   return (
     <>
+      
       {load ? (
         <CircularProgress
           size={68}
@@ -83,30 +91,28 @@ export const InputForm: React.FC = () => {
           bgcolor="white.main"
           boxShadow={3}
           width={450}
-          height={150}
+          height={200}
           mx="auto"
           mt="2rem"
         >
-          <form data-test='login-form' style={classes.form} onSubmit={submitHandler}>
-            <Input
+          
+          <form data-test="login-form" style={classes.form} onSubmit={submitHandler}>
+            <TextField
+              id="outlined-basic" 
+              data-testid="name-data-input"
+              value={input}
+              label='CountryName'
               style={classes.Input}
-              type="text"
-              required
-              name='countryName'
               className="form-control"
               placeholder="Enter Country"
-              onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                setInput(event.target.value)
-              }
-              value={input}
+              onChange={handleChange}
             />
             <Button
+              variant="contained" 
+              data-testid="submit-button" 
+              type="submit" 
               style={classes.button}
-              type="submit"
-              variant="contained"
-              color="primary"
-              startIcon={<NoteAddIcon />}
-              disabled={input === ""}
+              disabled={flag < 1}
             >
               Submit
             </Button>

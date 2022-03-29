@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Input, Button, CircularProgress, Alert, AlertTitle } from '@mui/material';
+import { Box, Input, Button, CircularProgress, Alert, AlertTitle, InputBase } from '@mui/material';
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
@@ -88,30 +88,35 @@ const AsteroidSearch :React.FC= () => {
     				mt='2rem'
     				data-test='box'
 			    >
+			    	
 			    	<form onSubmit={submitHandler} style={classes.form}>
-			    		<Input
-			    			type='text'
+			    		<InputBase
+			    			type="text"
+			    			data-testid="count"
 			    			required
-			    			className='form-control'
-			    			placeholder='Enter Asteroid ID'
+			    			className="form-control"
+			    			placeholder="Enter Asteroid ID"
 			    			onChange={(e:React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
 			    			value={input}
-			    		/>
+			    		></InputBase>
 			    		<Button
-			    			type='submit'
-			    			variant='contained'
-			    			color='primary'
-			    			disabled={input===""}
+			    			data-testid="submit-button"
+				            type="submit"
+				            variant="contained"
+				            color="primary"
+				            disabled={input===""}
 			    		>
 			    			Submit
 			    		</Button>
 			    	</form>
+			    	
 			    	<Button
-			    		type='submit'
-			    		variant='contained'
-			    		color='primary'
-			    		style={classes.button}
-			    		onClick={randomIdHandler}
+			    		data-testid="submit-button"
+			            style={classes.button}
+			            type="submit"
+			            variant="contained"
+			            color="primary"
+			            onClick={randomIdHandler}
 			    	>
 			    		Random Asteroid
 			    	</Button>

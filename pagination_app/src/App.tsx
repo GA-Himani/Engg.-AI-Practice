@@ -29,7 +29,7 @@ function App() {
 
     return (
       <BrowserRouter>
-      <h2 style={{textAlign:'center'}}> Pagination App </h2>
+        <h2 style={{textAlign:'center'}} data-testid="home-heading" > Pagination App </h2>
        <Routes>
        <Route  path='/' element={<Dashboard pageNumber={page}/>}  />
        </Routes>

@@ -53,7 +53,7 @@ const CountryDetail = () => {
         />
       ) : null}
       <Container >
-        <h1 style = {classes.title}>Country's Detail</h1>
+        <h2 data-testid="weather-heading" style = {classes.title}>Weather Details</h2>
       <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={{ xs: 2, md: 3 }} >
       {showDetail &&

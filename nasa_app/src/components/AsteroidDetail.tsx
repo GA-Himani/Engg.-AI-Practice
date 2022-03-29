@@ -19,7 +19,8 @@ const AsteroidDetail = () => {
         		mt='2rem'
         	>
         		<div>
-        			<h3 data-testid='location'>
+                    <h1 data-testid="asteroid-heading"> Asteroid Information</h1>
+        			<h3>
         				Name : {data.name}
         			</h3>
         			<h3>

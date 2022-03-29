@@ -66,7 +66,7 @@ const Question = () => {
   };
 
 
-  const [result, setResult] = useState(false);
+  const [result, setResult] = useState(false); 
   const [showModal, setShowModal] = useState(false);
   const [correct, setCorrect] = useState(0);
 
