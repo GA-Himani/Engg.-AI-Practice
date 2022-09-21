@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    /*-webkit-user-select: none;*/
+    -webkit-user-drag: none;
+    -webkit-app-region: none;
+}
+
+.App {
+    text-align: center;
+    background-image:linear-gradient(to right, #f8e3e3 10%, #a6a4a4 100%);
+    padding: 5px;
+}
+
+.display {
+    display: grid;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, rgba(255,255,255, 0.6), rgba(255,255,255,0.3));
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.2);
+    font-size: 25px;
+    font-weight: bold;
+}
+input{
+    text-align: right;
+    border: none;
+    background-image: linear-gradient(to bottom, rgba(223,220,220, 0.6), rgba(208,203,203,0.3));
+    font-size: 20px;
+}
+input:focus-visible {
+    background-image: linear-gradient(to bottom, rgba(223,220,220, 0.6), rgba(208,203,203,0.3));
+    outline-color: none;
+    outline-style: none;
+    outline-width: none;
+}
+.output-container {
+    text-align: right;
+    
+}
+
+.input-container {
+    
+    text-align: center;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 15px;
+    backdrop-filter: blur(3px);
+}
+
+.btn {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    border: 1px cornflowerblue solid;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.4);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.btn:hover {
+    background-color: rgba(255,255,255,0.8);
+}
+
+.btncolor {
+    background-color: rgba(173,128,215,0.75);
+    border: none;
+}
+
+.btncolorequal {
+    background-color: rgba(14,209,14,0.85);
+    border: none;
+}
+
+.btnborder {
+    border: 0.5px rgba(255,0,0,0.64) solid;
+}

@@ -1,0 +1,125 @@
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  font-size: 20px;
+  padding: 10px;
+}
+
+Link{
+  text-decoration: none;
+}
+
+.header{
+  margin-top: 20px;
+}
+
+.Form{
+  margin-top: 50px;
+}
+
+.Form input{
+  margin: 10px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.btn{
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-back{
+  float: left;
+  background-color: cornflowerblue;
+  margin-bottom: 30px;
+}
+
+.btn-edit{
+  background-color: cornflowerblue;
+  color: #fff;
+}
+
+.btn-success{
+  background-color: darkturquoise;
+}
+
+.btn-danger{
+  background-color: red;
+ color: #fff;
+}
+
+.btn-add{
+  float: right;
+  background-color: cornflowerblue;
+}
+
+.menu{
+  float:left;
+}
+
+.btn-menu{
+  margin-bottom: 10px;
+  background-color: cornflowerblue;
+}
+
+.img{
+  height: 250px;
+  width: 250px;
+}
+
+.box{
+  margin-top: 50px;
+}
+
+.box-content{
+  float: left;
+  width: 33%;
+  height: 500px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.content{
+  
+}
+
+.box-text{
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.search{
+  
+  padding: 50px;
+  margin-bottom: 10px;
+}
+
+.search button{
+  float: right;
+  border-radius: 10px;
+  font-size: 15px;   
+}
+
+.search input{
+  float: right;
+  margin-right: 10px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 15px;    
+}
+
+.search input:focus{
+  outline: none;
+}
+
+.active_class{
+  color: black;
+}
