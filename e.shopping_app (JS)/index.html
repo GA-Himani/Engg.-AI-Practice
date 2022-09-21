@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="container">
+        <div class="row" style="padding-top:20px ;">
+            <div class="col-lg-3">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="glyphicon glyphicon-align-justify"></span>
+                        </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="trash.html">Trash</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-3">
+                <form class="navbar-form navbar-right" action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="search" id="sBox">
+                            <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit" id="submitBtn" data-filter = "All">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+       </div> 
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <form action="">
+                <h3>Filter</h3>
+                <div><label for="location1"><input type="checkbox">Ahmedabad</label></div>
+                <div><label for="location2"><input type="checkbox">Baroda</label></div>
+                <div><label for="location3"><input type="checkbox">Surat</label></div>
+                <div><label for="location4"><input type="checkbox">Rajkot</label></div>
+                <div><label for="location5"><input type="checkbox">Gandhinagar</label></div>
+                                <hr>
+                <div><label for="in stock"><input type="radio" id="instock" name="stock"> In Stock </label></div>
+                <div><label for="out stock"><input type="radio" id="outstock" name="stock"> Out Stock </label></div>
+            </form>
+            <div id="containt"></div>
+            
+            
+        </div>
+        
+        <a href="productForm.html" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-plus-sign"></span> Add Product
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!----Laptop link :-
+    lenovo          https://m.media-amazon.com/images/I/61q6x-ll5FL._SL1000_.jpg
+    hp              https://m.media-amazon.com/images/I/71SMr4ZGf1L._SL1500_.jpg
+    dell            https://m.media-amazon.com/images/I/51CEknIIHcL._SL1080_.jpg
+Mobile link :- 
+    samsung Zfold3  https://m.media-amazon.com/images/I/71MmJNwZcML._SL1500_.jpg
+    samsung M12     https://m.media-amazon.com/images/I/81QsZ3U4GfL._SL1500_.jpg
+    samsung M31     https://m.media-amazon.com/images/I/71SujJPzttL._SL1500_.jpg-->

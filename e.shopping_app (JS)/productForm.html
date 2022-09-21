@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 detailPage">
+                <a href="index.html"><span class="glyphicon glyphicon-chevron-left">Back</span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="text-align: center;">Product Form</h1>
+                <form action=""onsubmit="event.preventDefault();onFormSubmit();" id="form" style="padding-bottom: 15px;text-align: center;">
+                    <div><label for="product title"> Enter the name of Product </label></div>
+                    <div><input type="text" id="PName"></div>
+                    <div><label for="product image"> Enter the URL of Product Image </label></div>
+                    <div><input type="text" id="Pimage"></div>
+                    <div><label for="description"> Give details and description about Product</label></div>
+                    <div><textarea name="description" id="descProduct" cols="60" rows="15"></textarea></div>
+                    <div><label for="location1"><input type="checkbox" id="a'bad">Ahmedabad</label></div>
+                    <div><label for="location2"><input type="checkbox" id="baroda">Baroda</label></div>
+                    <div><label for="location3"><input type="checkbox" id="surat">Surat</label></div>
+                    <div><label for="location4"><input type="checkbox" id="rajkot">Rajkot</label></div>
+                    <div><label for="location5"><input type="checkbox" id="g'nagar">Gandhinagar</label></div>
+                    <div><label for="in stock"><input type="radio" id="insto" checked> In Stock </label></div>
+                    <div><label for="out stock"><input type="radio" id="outsto"> Out Stock </label></div>
+                    <div><label for="product price"> Enter the price of Product </label></div>
+                    <div><input type="text" id="Price"></div>
+                    <div><button type="submit" class="btn btn-primary" id="saveBtn" >Save</button></div>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
